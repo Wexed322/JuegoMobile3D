@@ -1,0 +1,29 @@
+# Material file for kksign.obj
+
+newmtl clam
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.2 0.2 0.2
+	map_Kd tex1_64x64_acc832b0d0f08768_e3433e20b1b58086_9.png
+
+newmtl sign
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.2 0.2 0.2
+	map_Kd tex1_64x64_1179812356ccbb35_423d81c73aae65b9_9.png
+
+newmtl pole
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.2 0.2 0.2
+	map_Kd tex1_64x64_f46c0987aefe89db_88101a011fd4db1c_9.png
+

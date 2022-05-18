@@ -1,0 +1,47 @@
+# Material file for kkrab.obj
+
+newmtl kkrab_door
+	Ns 0
+	d 1
+	illum 2
+	Kd 0.8 0.8 0.8
+	Ks 0.0 0.0 0.0
+	Ka 0.2 0.2 0.2
+	map_Kd tex1_128x128_48ffe27d355bba8a_899d964ba94c42e5_9.png
+
+newmtl kkrab_flags
+	Ns 0
+	d 1
+	illum 2
+	Kd 0.8 0.8 0.8
+	Ks 0.0 0.0 0.0
+	Ka 0.2 0.2 0.2
+	map_Kd tex1_128x128_5569c61ce1e7037c_c4b2cb30f136b407_9.png
+
+newmtl kkrab_wood
+	Ns 0
+	d 1
+	illum 2
+	Kd 0.8 0.8 0.8
+	Ks 0.0 0.0 0.0
+	Ka 0.2 0.2 0.2
+	map_Kd tex1_128x128_d24df1cb75c7037a_6b615af9697ecd25_9.png
+
+newmtl kkrab_net
+	Ns 0
+	d 1
+	illum 2
+	Kd 0.8 0.8 0.8
+	Ks 0.0 0.0 0.0
+	Ka 0.2 0.2 0.2
+	map_Kd tex1_128x128_8bcc69139faa253d_dd04edc9f37274e5_9.png
+
+newmtl kkrab_doorway
+	Ns 0
+	d 1
+	illum 2
+	Kd 0.8 0.8 0.8
+	Ks 0.0 0.0 0.0
+	Ka 0.2 0.2 0.2
+	map_Kd tex1_32x32_d1498f8b961fac84_cab816f1ac6912ba_9.png
+
