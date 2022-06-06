@@ -14,34 +14,45 @@ public class PlayerController : MonoBehaviour
     private Vector3 aceleration;
     public float velocidad;
     public float velocidad2;
-    /*void Start()
-    {
-        //gyroscopeEnabled = EnableGyro();
 
-    }*/
+    public SwitchControl switchControlReference;
+    public ButtonControl buttonControlReference;
+
     void Update()
     {
+        if (switchControlReference.controls.Equals(Control.acelerometer))
+        {
+            Debug.Log("usando acelerometro");
+            acelerometerControl();
+        }
+        if (switchControlReference.controls.Equals(Control.arrows)) 
+        {
+            Debug.Log("usando arrows");
+            ArrowsControl();
+        }
+    }
+    public void acelerometerControl()
+    {
         aceleration = new Vector3(Input.acceleration.x, Input.acceleration.y, Input.acceleration.z);
-        text1.text =  "X: " + aceleration.x.ToString();
-        text2.text =  "Y: " + aceleration.y.ToString();
-        text3.text =  "Z: " + aceleration.z.ToString();
+        text1.text = "X: " + aceleration.x.ToString();
+        text2.text = "Y: " + aceleration.y.ToString();
+        text3.text = "Z: " + aceleration.z.ToString();
 
         if (Mathf.Abs(aceleration.x) > 0.05f && Mathf.Abs(aceleration.z) > 0.05f)
         {
-            Vector3 movimiento = (this.transform.forward * velocidad * aceleration.x + this.transform.right * velocidad2 * aceleration.z) * Time.deltaTime;
+            Vector3 movimiento = this.transform.right * velocidad2 * aceleration.z * Time.deltaTime;
             this.transform.position += movimiento;
         }
     }
 
-    /*private bool EnableGyro() 
+    public void ArrowsControl()
     {
-        if (SystemInfo.supportsGyroscope) 
+        if (buttonControlReference != null) 
         {
-            gyroscope = Input.gyro;
-            gyroscope.enabled = true;
-            return true;
-        }
-        return false;
-    }*/
+            int directionLnR = buttonControlReference.direction;
 
+            Vector3 movimiento = this.transform.forward * velocidad * directionLnR * Time.deltaTime;
+            this.transform.position += movimiento;
+        }
+    }
 }
